@@ -11,10 +11,10 @@ const Register = () => {
         setEmail(event.target.value);
     }
     const handlePasswordBlur = event =>{
-        setEmail(event.target.value);
+        setPassword(event.target.value);
     }
     const handleConfirmPasswordBlur = event =>{
-        setEmail(event.target.value);
+        setConfirmPassword(event.target.value);
     }
     const handleCreateUser = event =>{
         event.preventDefault();
@@ -22,6 +22,7 @@ const Register = () => {
             setError("Your password didn't match!");
           return;
         }
+        setError('');
     }
   
     return (
