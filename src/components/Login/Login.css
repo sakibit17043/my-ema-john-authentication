@@ -1,0 +1,85 @@
+.form-container {
+    width: 500px;
+    margin: 0 auto;
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    box-shadow: -11px 11px  #FFE0B3;;
+}
+
+.form-title {
+    font-weight: 400;
+    font-size: 35px;
+    color: #2A414F;
+    text-align: center;
+}
+
+.form-container label {
+    display: block;
+    margin: 0 0 5px 5px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 415px;
+    height: 55px;
+    border: 1px solid #95A0A7;
+    border-radius: 5px;
+    font-size: 25px;
+
+}
+
+.form-submit {
+    width: 415px;
+    height: 55px;
+    background: rgba(255, 153, 0, 0.3);
+    border-radius: 5px;
+    border:none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.form-submit:hover{
+    background: rgba(255, 153, 0, 0.6);
+}
+.form-link{
+    color: #FF9900;
+    text-decoration: none;
+    margin-left: 5px;
+}
+.line{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+
+}
+.line div{
+    border: 1px solid gainsboro;
+    width: 150px;
+
+}
+.line p{
+    margin: 0 15px;
+}
+.google-btn{
+    width: 415px;
+    height: 55px;
+    border:1px solid 
+    rgba(149, 160, 167, 1);
+    border-radius:5px;
+    font-size: 20px;
+    background-color: white;
+    margin: 10px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.google-btn img{
+    margin-right: 10px;
+}
