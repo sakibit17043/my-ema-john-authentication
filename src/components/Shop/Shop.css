@@ -11,6 +11,13 @@
 .cart-container{
     background-color: rgba(255, 153, 0, 0.3);
 }
+.review-button{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    background-color:orange;
+}
 @media screen and (max-width:1100px) {
     .products-container{
         grid-template-columns: repeat(2, 1fr);
