@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import{useCreateUserWithEmailAndPassword} from 'react-firebase-hooks/auth';
+import{useCreateUserWithEmailAndPassword, useSignInWithGoogle} from 'react-firebase-hooks/auth';
 
 const Register = () => {
     const [email,setEmail] = useState('');
@@ -10,7 +10,11 @@ const Register = () => {
     const [confirmPassword,setConfirmPassword] = useState('');
     const [error,setError] = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
     const [createUserWithEmailAndPassword,user] = useCreateUserWithEmailAndPassword(auth);
+    const [signInWithGoogle,googleUser] = useSignInWithGoogle(auth);
+
     
     const handleEmailBlur = event =>{
         setEmail(event.target.value);
@@ -23,7 +27,12 @@ const Register = () => {
         setConfirmPassword(event.target.value);
     }
     if(user){
-        navigate('/shop');
+    
+        navigate(from,{replace: true})
+    }
+    if(googleUser){
+    
+        navigate(from,{replace: true})
     }
     const handleCreateUser = event =>{
         event.preventDefault();
@@ -66,7 +75,7 @@ const Register = () => {
              <p>or</p>
              <div></div>
         </div>
-        <button className='google-btn'>
+        <button onClick={()=>signInWithGoogle()} className='google-btn'>
          <div>
 
          <img width={30} src="google.jpg" alt="" />
