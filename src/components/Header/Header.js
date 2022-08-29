@@ -21,7 +21,8 @@ const Header = () => {
                 <Link to="/about">About</Link>
                 {
                     user?
-                    <button onClick={handleSignOut}>Sign Out</button>
+                    // <button onClick={handleSignOut}>Sign Out</button>
+                    <Link to='/' onClick={handleSignOut}>Sign Out</Link>
                     :
                 <Link to='/login'>Login</Link>
                 }
